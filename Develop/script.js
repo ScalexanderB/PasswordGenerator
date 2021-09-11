@@ -62,7 +62,7 @@ function generatePassword() {
     var passwordString = [];
 
     // Check if addLower passes through to passwordString string
-    var addLower = lower.split("");
+    var addLower = lowerCase.split("");
 
     if (askLower === true) {
       passwordString = passwordString.concat(addLower);
@@ -73,7 +73,7 @@ function generatePassword() {
     }
 
     // Check if addUpper passes through to passwordString string
-    var addUpper = upper.split("");
+    var addUpper = upperCase.split("");
     if (askUpper === true) {
       passwordString = passwordString.concat(addUpper);
       console.log("Uppercase will be included.");
@@ -93,7 +93,7 @@ function generatePassword() {
     }
 
     // Check if addSymbol passes through to passwordString string
-    var addSymbol = special.split("");
+    var addSymbol = symbol.split("");
     if (askSymbol === true) {
       passwordString = passwordString.concat(addSymbol);
       console.log("Special characters will be included.");
@@ -101,9 +101,18 @@ function generatePassword() {
     else{
       console.log("Special characters will not be included.");
     }
+
+    // Execute randomly generated password based on user confirmations
+    var completePassword = "";
+
+    for (var i = 0; i < passwordLength; i++) {
+      completePassword += passwordString[Math.floor(Math.random() * passwordString.length)];
+      console.log(completePassword);
+    }
+    
+    return completePassword;
 }
 
-// Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -112,5 +121,6 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
+/* END OF GENERATOR FUNCTIONS */
+
 generateBtn.addEventListener("click", writePassword);
