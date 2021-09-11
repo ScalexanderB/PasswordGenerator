@@ -13,5 +13,10 @@ https://scalexanderb.github.io/PasswordGenerator/
 
 ## Screenshots of active webpage and console log sample
 
+![PW gen pic](https://user-images.githubusercontent.com/88293666/132951223-febc0afc-9931-4d52-9afe-cd288143e066.PNG)
+
+![PW gen console sample](https://user-images.githubusercontent.com/88293666/132951229-281df5ce-45fb-4e34-b799-aa319dce08c4.PNG)
+
+
 
 
