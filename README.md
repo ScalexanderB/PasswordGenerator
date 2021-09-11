@@ -8,7 +8,10 @@
 
 ## Link to live website
 
+https://scalexanderb.github.io/PasswordGenerator/
 
 
 ## Screenshots of active webpage and console log sample
+
+
 
