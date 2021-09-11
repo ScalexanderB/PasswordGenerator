@@ -36,7 +36,7 @@ function generatePassword() {
     
     else {
       console.log("Password length is " + passwordLength);
-    }
+    
 
         // Ask the user if they want lowercase
         var askLower = confirm("Would you like to include lowercase characters?");
@@ -57,6 +57,50 @@ function generatePassword() {
           var askNumber = confirm("Would you like to include numbers?");
           var askSymbol = confirm("Would you like to include special characters?");
         }
+    }
+    // Pass all true parameters to the string
+    var passwordString = [];
+
+    // Check if addLower passes through to passwordString string
+    var addLower = lower.split("");
+
+    if (askLower === true) {
+      passwordString = passwordString.concat(addLower);
+      console.log("Lowercase will be included");
+    }
+    else{
+      console.log("Lowercase will not be included.");
+    }
+
+    // Check if addUpper passes through to passwordString string
+    var addUpper = upper.split("");
+    if (askUpper === true) {
+      passwordString = passwordString.concat(addUpper);
+      console.log("Uppercase will be included.");
+    }
+    else{
+      console.log("Uppercase will not be included.");
+    }
+
+    // Check if addNumber passes through to passwordString string
+    var addNumber = number.split("");
+    if (askNumber === true) {
+      passwordString = passwordString.concat(addNumber);
+      console.log("Numbers will be included.");
+    }
+    else{
+      console.log("Numbers will not be included.");
+    }
+
+    // Check if addSymbol passes through to passwordString string
+    var addSymbol = special.split("");
+    if (askSymbol === true) {
+      passwordString = passwordString.concat(addSymbol);
+      console.log("Special characters will be included.");
+    }
+    else{
+      console.log("Special characters will not be included.");
+    }
 }
 
 // Write password to the #password input
